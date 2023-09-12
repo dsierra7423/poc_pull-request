@@ -3,7 +3,6 @@ from datetime import date
 import datetime
 import email_service
 import pull_request_service
-import email_service
 from jinja2 import Template
 
 '''
@@ -38,7 +37,7 @@ def send_pullrequest_to_email(gitVo, emailVo):
 If we need to test in the local environment we use this main method..
 '''
 if __name__ == '__main__':
-    gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 2)
+    gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 4)
     emailVo = email_service.Connection("smtp.gmail.com", 587 ,"doswaldo7423@gmail.com",["doswaldo7423@gmail.com","doswaldo74@gmail.com"], "igwnmbmovakgpsdi" )
     send_pullrequest_to_email(gitVo, emailVo)
 
@@ -46,9 +45,9 @@ if __name__ == '__main__':
 '''
 If we need to deploy this service as AWS Lambda Service we use this method. 
 '''
-def handler(event, context):
-#def handler():
-    gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 2)
+#def handler(event, context):
+def handler():
+    gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 2)
     emailVo = email_service.Connection("smtp.gmail.com", 587 ,"doswaldo7423@gmail.com",["doswaldo7423@gmail.com","doswaldo74@gmail.com"], "igwnmbmovakgpsdi" )
     send_pullrequest_to_email(gitVo, emailVo)
 

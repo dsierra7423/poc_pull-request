@@ -1,7 +1,7 @@
 # TEST LOCAL
 
 ```bash
-cd git_service/pr/
+cd service/pr/
 python3 app.py
 ```
 
