@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 # Copy function code to container
 #COPY app.py ./
-COPY . .
+COPY service/pr .
 
 # setting the CMD to your handler file_name.function_name
-CMD [ "service/pr/app.handler" ]
+CMD [ "app.handler" ]
