@@ -48,9 +48,9 @@ If we need to deploy this service as AWS Lambda Service we use this method.
 '''
 def handler(event, context):
 #def handler():
-    #gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 2)
-    #emailVo = email_service.Connection("smtp.gmail.com", 587 ,"doswaldo7423@gmail.com",["doswaldo7423@gmail.com","doswaldo74@gmail.com"], "igwnmbmovakgpsdi" )
-    #send_pullrequest_to_email(gitVo, emailVo)
+    gitVo = pull_request_service.Connection("https://api.github.com/repos/octocat/Hello-World/pulls","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","%Y-%m-%dT%H:%M:%SZ", 2)
+    emailVo = email_service.Connection("smtp.gmail.com", 587 ,"doswaldo7423@gmail.com",["doswaldo7423@gmail.com","doswaldo74@gmail.com"], "igwnmbmovakgpsdi" )
+    send_pullrequest_to_email(gitVo, emailVo)
 
     return {
         'headers': {'Content-Type' : 'application/json'},
