@@ -3,7 +3,7 @@
 FROM public.ecr.aws/lambda/python:3.10-x86_64
 #FROM python:3.11.1-slim
 
-WORKDIR /app
+#WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 # copy requirements.txt to container
