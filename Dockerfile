@@ -15,6 +15,4 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # setting the CMD to your handler file_name.function_name
-RUN cd service/pr
-CMD [ "app.handler" ]
-
+CMD [ "service/pr/app.handler" ]
