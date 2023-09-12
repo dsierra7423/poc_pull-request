@@ -1,0 +1,8 @@
+<body>
+  <h1>{{ tittle }} </h1>
+  <ul>
+  {% for pr in pulls %}
+      <li> {{ pr["created_at"] }}  <strong> {{ pr["title"] }} </strong> {{ pr["url"] }} </li>
+  {% endfor %}
+  </ul>
+</body>

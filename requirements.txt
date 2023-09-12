@@ -1,0 +1,6 @@
+requests==2.25.1
+fastapi
+uvicorn
+pydantic
+PyGithub 
+jinja2
